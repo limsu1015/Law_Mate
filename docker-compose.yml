@@ -1,6 +1,8 @@
 services:
   db:
     image: postgres:15
+    volumes:
+      - postgres_date:/var/lib/postgresql/data
     container_name: law_mate
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
